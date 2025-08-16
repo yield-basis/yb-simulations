@@ -1,0 +1,6 @@
+btcusd/curve-data/long-curve-btcusdc-1m.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/curve-data/slices-1y.7z filter=lfs diff=lfs merge=lfs -text
+btcusd/curve-data/slices-6m.7z filter=lfs diff=lfs merge=lfs -text
+btcusd/curve-data/check/check-curve-ethusdc-1m.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/curve-data/check/check-curve-btcusdc-1m.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/curve-data/check/check-curve-ethbtc-1m.json.xz filter=lfs diff=lfs merge=lfs -text
