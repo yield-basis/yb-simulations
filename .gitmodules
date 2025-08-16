@@ -1,0 +1,3 @@
+[submodule "cryptopool-simulator"]
+	path = cryptopool-simulator
+	url = git@github.com:curvefi/cryptopool-simulator.git
