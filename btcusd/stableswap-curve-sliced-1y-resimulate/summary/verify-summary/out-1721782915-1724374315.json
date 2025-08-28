@@ -1,0 +1,31 @@
+{
+    "configuration": [
+        {
+            "A": 8.2,
+            "D": 20000000.0,
+            "Result": {
+                "APY": 0.2649005447735231,
+                "APY_boost": 0.22066221780935746,
+                "liq_density": 8.259489139896942,
+                "slippage": 0.13754273002758247,
+                "volume": 4.914426610216058
+            },
+            "adjustment_step": 1e-07,
+            "allowed_extra_profit": 1e-10,
+            "boost_rate": 0.0356,
+            "ext_fee": 0.00015,
+            "fee_gamma": 0.045,
+            "gamma": 0,
+            "gas_fee": 1,
+            "log": 0,
+            "ma_half_time": 1452,
+            "mid_fee": 0.00425,
+            "n": 2,
+            "out_fee": 0.025
+        }
+    ],
+    "datafile": [
+        "verify-1y-1690678920-btcusd"
+    ],
+    "debug": 0
+}

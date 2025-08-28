@@ -1,0 +1,2 @@
+mid_fee = 0.0035
+fee_gamma = 0.0747  @ A=7

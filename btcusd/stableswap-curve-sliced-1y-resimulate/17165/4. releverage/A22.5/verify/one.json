@@ -1,0 +1,24 @@
+{
+    "configuration": [
+        {
+            "D": 20000000.0,
+            "adjustment_step": 1e-07,
+            "fee_gamma": 0.2143125,
+            "ma_half_time": 3223,
+            "out_fee": 0.025,
+            "mid_fee": 0.0075,
+            "gas_fee": 1,
+            "n": 2,
+            "log": 1,
+            "allowed_extra_profit": 1e-10,
+            "ext_fee": 0.00015,
+            "gamma": 0,
+            "boost_rate": 0.022,
+            "A": 22.5
+        }
+    ],
+    "datafile": [
+        "verify-1y-1716598920-btcusd"
+    ],
+    "debug": 0
+}
