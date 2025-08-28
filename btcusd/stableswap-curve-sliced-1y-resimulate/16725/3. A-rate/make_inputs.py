@@ -7,20 +7,20 @@ import itertools
 from copy import copy
 
 
-X = np.logspace(log10(1), log10(50), 64)
+X = np.logspace(log10(1), log10(16), 64)
 Xname = "A"
-Y = np.logspace(log10(0.01), log10(0.5), 64)
+Y = np.logspace(log10(0.003), log10(0.05), 64)
 Yname = "boost_rate"
 
-fee_gamma_mul = 0.01 / 3.8  # fee_gamma = fee_gamma_mul * A
+fee_gamma_mul = 0.0235 / 7.5  # fee_gamma = fee_gamma_mul * A
 
 other_params = dict(
     D=20e6,
     adjustment_step=1e-7,
     fee_gamma=0.001,
     ma_half_time=600,
-    out_fee=0.025,
-    mid_fee=0.008,
+    out_fee=0.03,
+    mid_fee=0.00213,
     gas_fee=1,
     n=2,
     log=0,

@@ -17,8 +17,8 @@ with open(fname) as f:
 As = set()
 gammas = set()
 
-x_axis = 'fee_gamma'
-y_axis = 'boost_rate'
+x_axis = 'out_fee'
+y_axis = 'fee_gamma'
 
 for row in results['configuration']:
     As.add(row[x_axis])
@@ -30,9 +30,6 @@ gammas = sorted(list(gammas))
 Z = np.zeros((len(gammas), len(As)))
 
 for row in results['configuration']:
-    # APY
-    # liq_density
-    # volume
     Z[gammas.index(row[y_axis]), As.index(row[x_axis])] = row['Result']['APY_boost']
 
 fig, ax = plt.subplots()
@@ -42,8 +39,9 @@ im = ax.pcolormesh(As, gammas, Z, cmap=plt.get_cmap('jet'))
 im.set_edgecolor('face')
 cbar = fig.colorbar(im, ax=ax)
 
-plt.xlabel(x_axis)
-plt.ylabel(y_axis)
-cbar.set_label("(APR - boost_rate)", rotation=270, labelpad=15)
+ax.set_xlabel("out_fee")
+ax.set_ylabel("fee_gamma")
+cbar.set_label("APY - boost", rotation=270, labelpad=15)
+
 plt.tight_layout()
 plt.show()

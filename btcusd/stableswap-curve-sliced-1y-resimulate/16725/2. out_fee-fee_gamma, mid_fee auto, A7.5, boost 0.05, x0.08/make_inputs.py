@@ -7,20 +7,18 @@ import itertools
 from copy import copy
 
 
-X = np.logspace(log10(1), log10(50), 64)
-Xname = "A"
-Y = np.logspace(log10(0.01), log10(0.5), 64)
-Yname = "boost_rate"
-
-fee_gamma_mul = 0.003 / 8.5  # fee_gamma = fee_gamma_mul * A
+X = np.logspace(log10(0.008), log10(0.07), 64)
+Xname = "out_fee"
+Y = np.logspace(log10(1e-7), log10(1), 64)
+Yname = "fee_gamma"
 
 other_params = dict(
     D=20e6,
     adjustment_step=1e-7,
-    fee_gamma=0.001,
+    fee_gamma=2.26e-6,
     ma_half_time=600,
-    out_fee=0.014,
     mid_fee=0.008,
+    out_fee=0.025,
     gas_fee=1,
     n=2,
     log=0,
@@ -28,7 +26,7 @@ other_params = dict(
     ext_fee=0.00015,
     gamma=0,
     boost_rate=0.05,
-    A=10)
+    A=7.5)
 
 config = {
     'configuration': [],
@@ -39,7 +37,7 @@ for x, y in itertools.product(X, Y):
     params = copy(other_params)
     params[Xname] = x
     params[Yname] = y
-    params["fee_gamma"] = fee_gamma_mul * params['A']
+    params['mid_fee'] = 0.008**2 / params['out_fee']
     config['configuration'].append(params)
 
 with open('configuration.json', 'w') as f:

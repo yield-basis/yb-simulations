@@ -9,7 +9,7 @@ from copy import copy
 
 X = np.logspace(log10(1e-5), log10(1), 64)
 Xname = "fee_gamma"
-Y = np.logspace(log10(0.05), log10(0.4), 64)
+Y = np.logspace(log10(0.001), log10(0.1), 64)
 Yname = "boost_rate"
 
 other_params = dict(
@@ -17,8 +17,8 @@ other_params = dict(
     adjustment_step=1e-7,
     fee_gamma=0.001,
     ma_half_time=600,
-    out_fee=0.025,
-    mid_fee=0.008,
+    out_fee=0.03,
+    mid_fee=0.00213,
     gas_fee=1,
     n=2,
     log=0,
@@ -26,7 +26,7 @@ other_params = dict(
     ext_fee=0.00015,
     gamma=0,
     boost_rate=0.05,
-    A=15)
+    A=3.6)
 
 config = {
     'configuration': [],
