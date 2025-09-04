@@ -312,3 +312,5 @@ btcusd/stableswap-curve-sliced-1y-resimulate/16751/4.[[:space:]]releverage/A7/ve
 btcusd/stableswap-curve-sliced-1y-resimulate/16751/4.[[:space:]]releverage/A6.5[[:space:]]THIS/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
 btcusd/stableswap-curve-sliced-1y-resimulate/16751/4.[[:space:]]releverage/A6.5[[:space:]]THIS/verify/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
 btcusd/stableswap-curve-sliced-1y-resimulate/16751/train-1y-1675126920-btcusd.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/binance-data-filtered/Sep2024-Sep2025/btcusdt-1y-2024-2025.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/binance-data-filtered/Sep2024-Sep2025/btcusdt-processed-1y-2024-2025.json.xz filter=lfs diff=lfs merge=lfs -text
