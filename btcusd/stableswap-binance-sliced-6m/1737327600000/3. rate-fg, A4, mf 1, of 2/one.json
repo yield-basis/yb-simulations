@@ -1,0 +1,24 @@
+{
+    "configuration": [
+        {
+            "D": 20000000.0,
+            "adjustment_step": 1e-07,
+            "fee_gamma": 0.18,
+            "ma_half_time": 600,
+            "mid_fee": 0.01,
+            "out_fee": 0.02,
+            "gas_fee": 1,
+            "n": 2,
+            "log": 1,
+            "allowed_extra_profit": 1e-10,
+            "ext_fee": 5e-05,
+            "gamma": 0,
+            "boost_rate": 0.16,
+            "A": 26.3
+        }
+    ],
+    "datafile": [
+        "train-b-1737327600000-btcusd"
+    ],
+    "debug": 0
+}
