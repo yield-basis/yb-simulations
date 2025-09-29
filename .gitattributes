@@ -356,3 +356,4 @@ btcusd/stableswap-binance-sliced-6m/1737327600000[[:space:]]recalc[[:space:]]wit
 btcusd/stableswap-binance-sliced-6m/1737327600000[[:space:]]recalc[[:space:]]with[[:space:]]new[[:space:]]metric/7.[[:space:]]releverage[[:space:]]A16[[:space:]]dyn/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
 btcusd/stableswap-binance-sliced-6m/1737327600000/4.[[:space:]]releverage[[:space:]]A9[[:space:]]f0.25-1/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
 btcusd/stableswap-binance-sliced-6m/1737327600000/4.[[:space:]]releverage[[:space:]]A9[[:space:]]f0.25-1[[:space:]]xfee/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/stableswap-binance-sliced-6m/1737327600000[[:space:]]recalc[[:space:]]with[[:space:]]new[[:space:]]metric/14.[[:space:]]releverage[[:space:]]A9[[:space:]]dyn/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
