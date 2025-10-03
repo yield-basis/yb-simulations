@@ -195,13 +195,14 @@ if __name__ == '__main__':
 
     import pylab
     losses = np.array(simulator.losses[::100])
-    t = losses[:, 0]
-    t = (t - t[0]) / 86400
+    t = [datetime.fromtimestamp(_t) for _t in losses[:, 0]]
     loss = losses[:, 1] * 100 - 100
     pylab.plot(t, loss)
-    pylab.xlabel('t (days)')
+    pylab.xlabel('Time')
     pylab.ylabel('Deposit growth (%)')
+    pylab.xticks(rotation=45, ha='right')
     pylab.tight_layout()
+    pylab.grid()
     pylab.show()
 
     # Optimal fee = 3e-2
