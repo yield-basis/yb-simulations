@@ -17,8 +17,8 @@ with open(fname) as f:
 As = set()
 gammas = set()
 
-x_axis = 'A'
-y_axis = 'boost_rate'
+x_axis = 'out_fee'
+y_axis = 'fee_gamma'
 
 for row in results['configuration']:
     As.add(row[x_axis])

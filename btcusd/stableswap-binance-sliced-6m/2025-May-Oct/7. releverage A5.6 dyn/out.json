@@ -1,0 +1,33 @@
+{
+    "configuration": [
+        {
+            "A": 5.2,
+            "D": 20000000.0,
+            "Result": {
+                "APY": 0.03144150400300884,
+                "APY_boost": 0.01506976451181092,
+                "APY_boost_2": 0.003085791819860923,
+                "imbalance": 0.1570782974476829,
+                "liq_density": 6.067980922453012,
+                "slippage": 0.16567473313324602,
+                "volume": 7.010007687757855
+            },
+            "adjustment_step": 1e-07,
+            "allowed_extra_profit": 1e-10,
+            "boost_rate": 0.016,
+            "ext_fee": 5e-05,
+            "fee_gamma": 0.00198,
+            "gamma": 0,
+            "gas_fee": 1,
+            "log": 1,
+            "ma_half_time": 600,
+            "mid_fee": 0.00143,
+            "n": 2,
+            "out_fee": 0.0122
+        }
+    ],
+    "datafile": [
+        "btcusdt-may-oct-2025"
+    ],
+    "debug": 0
+}

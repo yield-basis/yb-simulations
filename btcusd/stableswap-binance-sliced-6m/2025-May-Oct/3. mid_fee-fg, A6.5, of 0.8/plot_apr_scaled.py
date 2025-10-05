@@ -17,8 +17,8 @@ with open(fname) as f:
 As = set()
 gammas = set()
 
-x_axis = 'A'
-y_axis = 'boost_rate'
+x_axis = 'boost_rate'
+y_axis = 'fee_gamma'
 
 for row in results['configuration']:
     As.add(row[x_axis])
@@ -33,7 +33,7 @@ for row in results['configuration']:
     # APY
     # liq_density
     # volume
-    Z[gammas.index(row[y_axis]), As.index(row[x_axis])] = row['Result']['APY_boost_2']
+    Z[gammas.index(row[y_axis]), As.index(row[x_axis])] = row['Result']['APY_boost'] - row['Result']['APY'] * row['Result']['imbalance']
 
 fig, ax = plt.subplots()
 plt.yscale('log')
