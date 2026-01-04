@@ -26,7 +26,7 @@ other_params = dict(
     ext_fee=0.0001,
     gamma=0,
     boost_rate=0.045,
-    A=4.7)
+    A=3.3)
 
 config = {
     'configuration': [],

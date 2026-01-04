@@ -8,7 +8,7 @@ from datetime import datetime
 
 
 PEG_TO = 'price_scale'  # price_oracle vs price_scale
-FEE = 0.015
+FEE = 0.0092
 boost_rate = 0.026 / (365 * 86400)
 
 
