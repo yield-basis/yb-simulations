@@ -3,12 +3,13 @@
 import json
 import lzma
 import numpy as np
-from math import sqrt, log10
+from math import sqrt
 from datetime import datetime
 
 
 PEG_TO = 'price_scale'  # price_oracle vs price_scale
-boost_rate = 0.006 / (365 * 86400)
+FEE = 0.0092
+boost_rate = 0.0112 / (365 * 86400)
 
 
 class AMM:
@@ -98,7 +99,9 @@ class AMM:
         self.debt = x0 - x_after
 
     def get_value(self):
-        return self.collateral * self.p_oracle - self.debt
+        x0 = self.get_x0()
+        Ip = ((x0 - self.debt) * self.collateral * self.p_oracle) ** 0.5
+        return 2 * Ip - x0
 
 
 class Simulator:
@@ -137,16 +140,19 @@ class Simulator:
         t_prev = t_start
 
         for d in self.simulation_data:
+            # amm.fee = max(fee, 1 * abs(d['price_oracle'] - d['price_scale']) / d['price_scale'])
+
             t = d['t']
             o = d['open']
             high = d['high']
             low = d['low']
-            pool_profit = 1 + d['profit']
+            pool_profit = d['xcp']**0.5
+            profit_ratio = pool_profit / (1 + d['profit'])
             ema = (d[PEG_TO] / ema0)**0.5
             amm.set_p_oracle(ema * pool_profit)
 
             r = (high / low)**0.5
-            low = (d['token0'] + d['token1'] * low) / V0
+            low = (d['token0'] + d['token1'] * low) / V0 * profit_ratio
             high = low * r
             high = high * (1 - self.ext_fee)
             low = low * (1 + self.ext_fee)
@@ -161,9 +167,9 @@ class Simulator:
             t_prev = t
 
             if self.log or self.verbose:
-                d = datetime.fromtimestamp(t).strftime("%Y/%m/%d %H:%M")
                 # current_value = amm.get_value() / ((d['close'] / self.simulation_data[0]['open'])**0.5)**leverage
                 current_value = amm.get_value() / ema**leverage
+                d = datetime.fromtimestamp(t).strftime("%Y/%m/%d %H:%M")
                 loss = current_value / initial_value * 100
                 if self.log:
                     print(f'{d}\t{o:.2f}\t{ema:.2f}\t{amm.get_p():.2f}\t\t{loss:.2f}%')
@@ -183,22 +189,20 @@ if __name__ == '__main__':
     simulator = Simulator(
             filename='detailed-output.json.xz',
             ext_fee=0.0,
-            log=False, verbose=False)
+            log=False, verbose=True)
 
-    fees = []
-    losses = []
-
-    for fee in np.logspace(log10(0.002), log10(0.05), 20):
-        fees.append(fee)
-        loss = simulator.single_run(fee=fee, leverage=2)
-        losses.append(loss)
-        print(fee, loss)
+    simulator.single_run(fee=FEE, leverage=2)
 
     import pylab
-    pylab.semilogx(fees, losses)
-    pylab.xlabel('Releverage AMM fee')
-    pylab.ylabel('APY')
+    losses = np.array(simulator.losses[::100])
+    t = [datetime.fromtimestamp(_t) for _t in losses[:, 0]]
+    loss = losses[:, 1] * 100 - 100
+    pylab.plot(t, loss)
+    pylab.xlabel('Time')
+    pylab.ylabel('Deposit growth (%)')
+    pylab.xticks(rotation=45, ha='right')
     pylab.tight_layout()
+    pylab.grid()
     pylab.show()
 
     # Optimal fee = 3e-2

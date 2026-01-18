@@ -402,3 +402,5 @@ btcusd/binance-data-filtered/2025[[:space:]]-[[:space:]]2026[[:space:]]Jan[[:spa
 btcusd/binance-data-filtered/2024[[:space:]]-[[:space:]]2026[[:space:]]Jan[[:space:]]4/btcusdt-2024-J2026.json.xz filter=lfs diff=lfs merge=lfs -text
 btcusd/binance-data-filtered/2025[[:space:]]yb[[:space:]]launch[[:space:]]-[[:space:]]2026[[:space:]]Jan[[:space:]]2/btcusdt-Sep2025-Jan2026.json.xz filter=lfs diff=lfs merge=lfs -text
 btcusd/stableswap-binance-sliced-6m/1737327600000/5.[[:space:]]releverage[[:space:]]A9[[:space:]]mf[[:space:]]1[[:space:]](PROD[[:space:]]CHECK)/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+ethusd/2-years-up/22.[[:space:]]releverage[[:space:]]A2[[:space:]]dynfee[[:space:]]long/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+ethusd/2-years-up/23.[[:space:]]releverage[[:space:]]A4[[:space:]]dynfee[[:space:]]long/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text

@@ -8,7 +8,7 @@ from datetime import datetime
 
 
 PEG_TO = 'price_scale'  # price_oracle vs price_scale
-boost_rate = 0.0055 / (365 * 86400)
+boost_rate = 0.0175 / (365 * 86400)
 
 
 class AMM:
