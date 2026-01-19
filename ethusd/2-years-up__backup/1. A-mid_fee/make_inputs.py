@@ -7,18 +7,18 @@ import itertools
 from copy import copy
 
 
-X = np.logspace(log10(2), log10(30), 100)
+X = np.logspace(log10(1), log10(20), 64)
 Xname = "A"
-Y = np.logspace(log10(0.01), log10(0.5), 100)
-Yname = "boost_rate"
+Y = np.logspace(log10(5e-4), log10(0.1), 64)
+Yname = "mid_fee"
 
 other_params = dict(
     D=20e6,
     adjustment_step=5e-3,
     fee_gamma=0.003,
     ma_half_time=600,
-    mid_fee=0.022,
-    out_fee=0.022,
+    mid_fee=0.003,
+    out_fee=0.003,
     gas_fee=0,
     n=2,
     log=0,
@@ -37,6 +37,7 @@ for x, y in itertools.product(X, Y):
     params = copy(other_params)
     params[Xname] = x
     params[Yname] = y
+    params['out_fee'] = y
     config['configuration'].append(params)
 
 with open('configuration.json', 'w') as f:
