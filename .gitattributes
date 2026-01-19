@@ -421,3 +421,4 @@ ethusd/2-years-up__backup/7.[[:space:]]releverage[[:space:]]A3.3[[:space:]]fee[[
 ethusd/2-years-up__backup/19.[[:space:]]releverage[[:space:]]A3.3/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
 ethusd/2-years-up__backup/7.[[:space:]]releverage[[:space:]]A3.8[[:space:]]fee[[:space:]]2.2/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
 ethusd/2-years-up__backup/4.[[:space:]]releverage[[:space:]]-[[:space:]]A3.4[[:space:]]rate0.027/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+ethusd/data-till-2026/ethusdt-1y-long.json.xz filter=lfs diff=lfs merge=lfs -text
