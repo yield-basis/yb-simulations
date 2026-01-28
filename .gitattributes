@@ -440,3 +440,4 @@ ethusd/2-years-up/RESULT/(old)[[:space:]]releverage[[:space:]]A2.5[[:space:]]mf[
 ethusd/2-years-up/RESULT/(old[[:space:]]+[[:space:]]rate)[[:space:]]releverage[[:space:]]A2.5[[:space:]]mf[[:space:]]0.43[[:space:]]of[[:space:]]2.4/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
 ethusd/2-years-up/RESULT/4.[[:space:]]releverage[[:space:]]A2.5[[:space:]]mf[[:space:]]0.43[[:space:]]of[[:space:]]2.4[[:space:]](smaller[[:space:]]rate[[:space:]]pt)/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
 ethusd/2-years-up/4.[[:space:]]releverage[[:space:]]A2.5[[:space:]]mf[[:space:]]0.43[[:space:]]of[[:space:]]2.4[[:space:]](smaller[[:space:]]rate[[:space:]]pt)/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/binance-data-filtered/2025[[:space:]]15[[:space:]]Apr[[:space:]]-[[:space:]]5[[:space:]]Oct/*.xz filter=lfs diff=lfs merge=lfs -text
