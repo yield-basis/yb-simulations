@@ -6,8 +6,10 @@ import numpy as np
 from math import sqrt
 from datetime import datetime
 
+from fxswap_lp_oracle_sim import FXSwapLPOracleSim
 
-PEG_TO = 'price_scale'  # price_oracle vs price_scale
+
+PEG_TO = 'lp_price'  # price_oracle vs price_scale vs lp_price
 FEE = 0.0092
 boost_rate = 0.0055 / (365 * 86400)
 
@@ -19,6 +21,10 @@ class AMM:
         self.fee = fee
         self.p_oracle = oracle
         self.debt = collateral * oracle * (leverage - 1) / leverage
+        with open("one.json") as f:
+            config = json.load(f)
+            Ann_1 = config["configuration"][0]["A"]
+        self.lp_oracle = FXSwapLPOracleSim(A=Ann_1/2)
 
     def set_p_oracle(self, p):
         self.p_oracle = p
@@ -134,7 +140,7 @@ class Simulator:
         t_start = self.simulation_data[0]['t']
         t_end = self.simulation_data[-1]['t']
 
-        ema0 = self.simulation_data[0][PEG_TO]
+        ema0 = self.simulation_data[0].get(PEG_TO)
         V0 = self.simulation_data[0]['token0'] + self.simulation_data[0]['token1'] * self.simulation_data[0]['low']
 
         t_prev = t_start
@@ -148,7 +154,8 @@ class Simulator:
             low = d['low']
             pool_profit = d['xcp']**0.5
             profit_ratio = pool_profit / (1 + d['profit'])
-            ema = (d[PEG_TO] / ema0)**0.5
+            ema = amm.lp_oracle.portfolio_value(d["price_oracle"], d["price_scale"]) / 10 ** 18 \
+                if PEG_TO == "lp_price" else (d[PEG_TO] / ema0) ** 0.5
             amm.set_p_oracle(ema * pool_profit)
 
             r = (high / low)**0.5
