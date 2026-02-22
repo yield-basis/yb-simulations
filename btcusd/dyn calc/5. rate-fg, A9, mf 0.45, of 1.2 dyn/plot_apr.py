@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+
+import json
+import sys
+import numpy as np
+# from math import log
+import matplotlib.pyplot as plt
+
+if len(sys.argv) > 1:
+    fname = sys.argv[1]
+else:
+    fname = 'results.json'
+
+with open(fname) as f:
+    results = json.load(f)
+
+As = set()
+gammas = set()
+
+x_axis = 'boost_rate'
+y_axis = 'fee_gamma'
+
+for row in results['configuration']:
+    As.add(row[x_axis])
+    gammas.add(row[y_axis])
+
+As = sorted(list(As))
+gammas = sorted(list(gammas))
+
+Z = np.zeros((len(gammas), len(As)))
+
+for row in results['configuration']:
+    # APY
+    # liq_density
+    # volume
+    Z[gammas.index(row[y_axis]), As.index(row[x_axis])] = row['Result']['APY_boost_2'] - 0.2 * row['Result']['imbalance_integral']
+
+fig, ax = plt.subplots()
+plt.yscale('log')
+plt.xscale('log')
+im = ax.pcolormesh(As, gammas, Z, cmap=plt.get_cmap('jet'))
+im.set_edgecolor('face')
+cbar = fig.colorbar(im, ax=ax)
+
+plt.xlabel(x_axis)
+plt.ylabel(y_axis)
+cbar.set_label("(APR - boost_rate)", rotation=270, labelpad=15)
+plt.tight_layout()
+plt.show()
