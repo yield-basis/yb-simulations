@@ -9,6 +9,7 @@ from datetime import datetime
 from fxswap_lp_oracle_sim import FXSwapLPOracleSim
 
 
+PLOT_PRICES = True
 PEG_TO = 'lp_price'  # price_oracle vs price_scale vs lp_price
 FEE = 0.0092
 boost_rate = 0.06 / (365 * 86400)
@@ -21,10 +22,6 @@ class AMM:
         self.fee = fee
         self.p_oracle = oracle
         self.debt = collateral * oracle * (leverage - 1) / leverage
-        with open("one.json") as f:
-            config = json.load(f)
-            Ann_1 = config["configuration"][0]["A"]
-        self.lp_oracle = FXSwapLPOracleSim(A=Ann_1/2)
 
     def set_p_oracle(self, p):
         self.p_oracle = p
@@ -124,6 +121,11 @@ class Simulator:
         self.ema_time = 0
         self.emas = []
         self.load_prices()
+        with open("one.json") as f:
+            config = json.load(f)
+            Ann_1 = config["configuration"][0]["A"]
+        self.lp_oracle = FXSwapLPOracleSim(A=Ann_1 / 2)
+        self.lp_prices = []
 
     def load_prices(self):
         with lzma.open(self.filename, 'r') as f:
@@ -140,7 +142,8 @@ class Simulator:
         t_start = self.simulation_data[0]['t']
         t_end = self.simulation_data[-1]['t']
 
-        ema0 = self.simulation_data[0].get(PEG_TO)
+        self.lp_oracle.ema0_oracle = self.simulation_data[0]['price_oracle']
+        self.lp_oracle.ema0_scale = self.simulation_data[0]['price_scale']
         V0 = self.simulation_data[0]['token0'] + self.simulation_data[0]['token1'] * self.simulation_data[0]['low']
 
         t_prev = t_start
@@ -153,9 +156,18 @@ class Simulator:
             high = d['high']
             low = d['low']
             pool_profit = 1 + d['profit']
-            ema = amm.lp_oracle.portfolio_value(d["price_oracle"], d["price_scale"])/10**18\
-                if PEG_TO == "lp_price" else (d[PEG_TO] / ema0)**0.5
-            amm.set_p_oracle(ema * pool_profit)
+            p_oracle = self.lp_oracle.get_price(PEG_TO, d)
+            amm.set_p_oracle(p_oracle)
+            ema = p_oracle / pool_profit  # without virtual_price
+            if PLOT_PRICES:
+                self.lp_prices.append(
+                    (
+                        t,
+                        *[self.lp_oracle.get_price(method, d) for method in [
+                                'price_oracle', 'price_scale', 'actual_portfolio_value', 'lp_price'
+                        ]],
+                    )
+                )
 
             r = (high / low)**0.5
             low = (d['token0'] + d['token1'] * low) / V0
@@ -209,5 +221,22 @@ if __name__ == '__main__':
     pylab.ylabel('Deposit growth (%)')
     pylab.tight_layout()
     pylab.show()
+
+    # plot LevAMM oracle p
+    if PLOT_PRICES:
+        amm_prices = np.array(simulator.lp_prices[::100])
+        t = amm_prices[:, 0]
+        t = (t - t[0]) / 86400
+        pylab.plot(t, amm_prices[:, 1], label="price_oracle")
+        pylab.plot(t, amm_prices[:, 2], label="price_scale")
+        pylab.plot(t, amm_prices[:, 3], label="actual_portfolio_value")
+        pylab.plot(t, amm_prices[:, 4], label="lp_price")
+        pylab.xlabel('Time')
+        pylab.ylabel('LevAMM price')
+        pylab.xticks(rotation=45, ha='right')
+        pylab.tight_layout()
+        pylab.grid()
+        pylab.legend()
+        pylab.show()
 
     # Optimal fee = 3e-2
