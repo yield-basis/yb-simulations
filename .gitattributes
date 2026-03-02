@@ -452,3 +452,6 @@ btcusd/2024-Jan2026/2.[[:space:]]rate-fg,[[:space:]]A9,[[:space:]]mf[[:space:]]0
 btcusd/2024-Jan2026/2.[[:space:]]rate-fg,[[:space:]]A6,[[:space:]]mf[[:space:]]0.55,[[:space:]]of[[:space:]]1.9/releverage/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
 btcusd/2024-Jan2026/2.[[:space:]]rate-fg,[[:space:]]A3,[[:space:]]mf[[:space:]]0.45,[[:space:]]of[[:space:]]1.9/releverage/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
 btcusd/dyn[[:space:]]calc/6.[[:space:]]releverage[[:space:]]A7[[:space:]]rate3.8/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/dyn[[:space:]]calc/6_[[:space:]]releverage[[:space:]]A7[[:space:]]rate4.2[[:space:]]__/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/dyn[[:space:]]calc/6_[[:space:]]releverage[[:space:]]A7[[:space:]]rate3.8/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/dyn[[:space:]]calc/6_[[:space:]]releverage[[:space:]]A9[[:space:]]rate6[[:space:]]__/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
