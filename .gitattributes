@@ -455,3 +455,6 @@ btcusd/dyn[[:space:]]calc/6.[[:space:]]releverage[[:space:]]A7[[:space:]]rate3.8
 btcusd/dyn[[:space:]]calc/6_[[:space:]]releverage[[:space:]]A7[[:space:]]rate4.2[[:space:]]__/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
 btcusd/dyn[[:space:]]calc/6_[[:space:]]releverage[[:space:]]A7[[:space:]]rate3.8/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
 btcusd/dyn[[:space:]]calc/6_[[:space:]]releverage[[:space:]]A9[[:space:]]rate6[[:space:]]__/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/dyn[[:space:]]calc/6.[[:space:]]releverage[[:space:]]A6[[:space:]]rate3.44/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/dyn[[:space:]]calc/6.[[:space:]]releverage[[:space:]]A6[[:space:]]rate5.63/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/dyn[[:space:]]lpf/2.[[:space:]]rate-fg,[[:space:]]A9,[[:space:]]mf[[:space:]]0.45,[[:space:]]of[[:space:]]2,[[:space:]]lpf[[:space:]]0.2[[:space:]]nodyn/releverage/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
