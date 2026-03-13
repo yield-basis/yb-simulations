@@ -469,3 +469,4 @@ btcusd/nodyn[[:space:]]lpf/4.[[:space:]]A7[[:space:]]lpf[[:space:]]0.35/6.[[:spa
 btcusd/nodyn[[:space:]]lpf/4.[[:space:]]A7[[:space:]]lpf[[:space:]]0.35/6.[[:space:]]rate-lpf,[[:space:]]mf[[:space:]]0.52,[[:space:]]of[[:space:]]3.1/releverage/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
 btcusd/dyn[[:space:]]lpf/4.[[:space:]]A9[[:space:]]dyn/6.[[:space:]]rate-lpf/releverage[[:space:]]nodyn/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
 btcusd/dyn[[:space:]]lpf/4.[[:space:]]A9[[:space:]]dyn/6.[[:space:]]rate-lpf/releverage/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/nodyn[[:space:]]lpf[[:space:]]simpler/6.[[:space:]]rate-lpf/releverage/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
