@@ -7,9 +7,9 @@ import itertools
 from copy import copy
 
 
-X = np.logspace(log10(0.002), log10(0.1), 100)
+X = np.logspace(log10(0.004), log10(0.03), 100)
 Xname = "boost_rate"
-Y = np.logspace(log10(0.1), log10(1), 100)
+Y = np.logspace(log10(0.2), log10(0.48), 100)
 Yname = "lp_profit_fraction"
 
 other_params = dict(

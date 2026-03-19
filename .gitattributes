@@ -510,3 +510,5 @@ btcusd/lpf[[:space:]]sliced/data/verify-b-1731970800000-btcusd.json.xz filter=lf
 btcusd/lpf[[:space:]]sliced/data/verify-b-1721602800000-btcusd.json.xz filter=lfs diff=lfs merge=lfs -text
 btcusd/lpf[[:space:]]sliced/data/train-b-1721602800000-btcusd.json.xz filter=lfs diff=lfs merge=lfs -text
 btcusd/lpf[[:space:]]sliced/data/verify-b-1729378800000-btcusd.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/nodyn[[:space:]]lpf[[:space:]]simpler/6.[[:space:]]rate-lpf,[[:space:]]A6[[:space:]]zoom/_releverage/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/nodyn[[:space:]]lpf[[:space:]]simpler/6.[[:space:]]rate-lpf,[[:space:]]A6[[:space:]]zoom/releverage/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
