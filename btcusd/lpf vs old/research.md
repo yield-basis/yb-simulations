@@ -140,6 +140,7 @@ One can note that `_price_scale` is following prices much better than before. In
 ![Imbalance since 2024](with_lpf/imbalances-sim-new-full.png)
 
 The imbalances at peaks reach 30%/70% and are much shorter than in the current pools. Interestingly, just like `price_scale`, they look a little bit better if we take data starting in 2025:
+
 ![Imbalance since 2024](with_lpf_short/imbalances-new.png)
 
 ### Deposit growth - fundamental value and redemption value
