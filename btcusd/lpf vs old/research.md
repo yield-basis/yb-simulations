@@ -125,10 +125,31 @@ Another very important point: currently LP gets 50% of the fees earned by the po
 
 ![Finding optimal LP fraction and boost rate using data from 2024 till now](with_lpf/scan.png)
 
+Optimal parameters found for BTC pools can be seen [here on GitHub](https://github.com/yield-basis/yb-simulations/blob/master/btcusd/lpf%20vs%20old/with_lpf/one.json)
+
 ### Following `price_scale`
+
+![price_scale with new pool code since 2024](with_lpf/prices-sim-new-full.png)
+
+One can note that `_price_scale` is following prices much better than before. Interestingly, if we start simulations in 2025, the price follows slightly better (though it could be due to random nature of the prices)
+
+![price_scale with new pool code since 2025](with_lpf_short/prices-new.png)
 
 ### Pool imbalance
 
+![Imbalance since 2024](with_lpf/imbalances-sim-new-full.png)
+
+The imbalances at peaks reach 30%/70% and are much shorter than in the current pools. Interestingly, just like `price_scale`, they look a little bit better if we take data starting in 2025:
+![Imbalance since 2024](with_lpf_short/imbalances-new.png)
+
 ### Deposit growth - fundamental value and redemption value
 
+![Deposit growth since 2024](with_lpf/growth-sim-new-full.png)
+
+With the updated pool code and parameters, we see that deposit growth lacks sudden drops of fundamental value and has much smaller and shorter TRD - much more desirable for protocol users.
+
 ## Conclusion
+
+Methodology for finding optimal parameters was improved, and necessary changes in pool code identified. We are able to decrease undesirable TRD by factor of 3 and its durations by probably up to an order of magnitude. Pressure on crvUSD peg is significantly reduced. Pool performance on average is comparable to what it was before.
+
+We should be scaling Yield Basis with the improved pools. Necessary changes in the code are underway.
