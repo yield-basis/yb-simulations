@@ -211,7 +211,7 @@ if __name__ == '__main__':
     pylab.ylabel('Deposit growth (%)')
     pylab.xticks(rotation=45, ha='right')
     pylab.tight_layout()
-    pylab.legend(loc="lower right")
+    pylab.legend(loc="upper left")
     pylab.grid()
     pylab.show()
 
