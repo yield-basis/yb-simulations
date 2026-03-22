@@ -11,7 +11,7 @@ URI_TEMPLATE = 'https://api.binance.com/api/v1/klines?symbol=%s&interval=1m&limi
 data = []
 
 begin = datetime.datetime.fromtimestamp(1706000040)
-start = datetime.datetime(year=2026, month=1, day=13)
+start = datetime.datetime(year=2026, month=3, day=22)
 dt = (start - begin)
 for i in range(-dt.days * 5, 0):
     d = int((start + datetime.timedelta(days=1) * i / 5).timestamp()) * 1000
