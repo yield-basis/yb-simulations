@@ -84,3 +84,51 @@ We want to fix the following problems most of which we see on the graphs:
 - Pool asjustment of `price_scale` is too abrupt: that creates sudden drops in fundamental value. That is undesired, and also leaks some value to arbitrage traders;
 - LevAMM behavior when pool is very imbalanced: we should always allow trades towards a smaller imbalance (not included on the graphs);
 - Curve pools currently can only use 50% fees earned towards rebalancing. Making this fraction tunable appears to make a large difference, as we will see further.
+
+## Improvements in simulations and pools
+
+#### Methodology changes
+
+Firstly, we want to discourage pool from being imbalanced. For that, when searching for maximum pool APR, we adjust it by an imbalance factor:
+```  
+avg_imbalance = average_over_time(
+	1 - 4 * b_0 * b_1 * price_scale / (b_0 + b_1 * price_scale)**2
+)
+APR_adjusted = APR * (1 - 0.2 * avg_imbalance)
+```
+where `b_0` and `b_1` are balances of crvUSD and BTC in the pool. If pool was ideally balanced all the time, this average would have been zero, and `APR_adjusted` would be just equal to `APR`.
+
+Secondly, we want to discourage times when APR is too low. For that, instead of calculating a "normal" APR, we calculate geometric mean of all the 2-month APRs defined in a moving window.
+
+#### Pool algorithm changes
+
+In currently operating BTC pools, price by which `price_scale` is adjusted is calculated as:
+```
+relative_price_step = max(
+	(price_scale - price_oracle) / price_scale / 5,
+	adjustment_step
+)
+```
+This limits the `relative_price_step` on the lower end.
+
+As it appears, limiting on the lower end does not improve performance at all, but limiting should instead be applied on the high end:
+```  
+relative_price_step = min(
+	(price_scale - price_oracle) / price_scale / 5,
+	adjustment_step
+)  
+adjustment_step ~= 0.5%
+```  
+This limits the price adjustment steps to be not larger than 0.5%. The method is already tested with WETH pool.
+
+Another very important point: currently LP gets 50% of the fees earned by the pool, and another 50% of fees is getting spent on pool rebalances. This poses a question: what if 50/50 split is sub-optimal? It appears that it indeed is. After all optimizations we found that for global optimum of our new metric, LP profit fraction should be around 40% while we should spend around 60% on rebalances. 50/50 split which we caurrently have hard-coded appears to be a pretty unstable point on the edge of feasibility according to the new metrics we just introduced.
+
+![Finding optimal LP fraction and boost rate using data from 2024 till now](with_lpf/scan.png)
+
+### Following `price_scale`
+
+### Pool imbalance
+
+### Deposit growth - fundamental value and redemption value
+
+## Conclusion
