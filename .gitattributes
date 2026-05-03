@@ -524,3 +524,5 @@ btcusd/lpf[[:space:]]vs[[:space:]]old/with[[:space:]]lpf[[:space:]]short/detaile
 btcusd/lpf[[:space:]]vs[[:space:]]old/with_lpf_short/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
 btcusd/lpf[[:space:]]vs[[:space:]]old/with_lpf/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
 btcusd/lpf[[:space:]]vs[[:space:]]old/old_short/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+ethusd/data-2024-2026-May/ethusdt-2024-May2026.json.xz filter=lfs diff=lfs merge=lfs -text
+ethusd/lpf/ethusdt-2024-May2026.json.xz filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+
+import datetime
+import time
+import requests
+import json
+
+pair = 'ETHUSDT'
+
+URI_TEMPLATE = 'https://api.binance.com/api/v1/klines?symbol=%s&interval=1m&limit=500&startTime={start}&endTime={end}' % pair
+data = []
+
+session = requests.Session()
+
+begin = datetime.datetime(year=2024, month=1, day=1)
+start = datetime.datetime.utcnow()
+dt = (start - begin)
+for i in range(-dt.days * 5, 0):
+    d = int((start + datetime.timedelta(days=1) * i / 5).timestamp()) * 1000
+    uri = URI_TEMPLATE.format(start=d, end=d + 86400 * 1000 // 5 - 1)
+    while True:
+        try:
+            resp = session.get(uri).json()
+        except Exception as e:
+            print(e)
+            time.sleep(1)
+            continue
+        break
+    print(pair, datetime.datetime.fromtimestamp(d // 1000), len(resp))
+    data += resp
+    time.sleep(0.3)
+
+with open(pair.lower() + '.json', 'w') as f:
+    json.dump(data, f)
