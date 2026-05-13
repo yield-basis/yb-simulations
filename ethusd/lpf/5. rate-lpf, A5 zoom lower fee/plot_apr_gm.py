@@ -33,7 +33,7 @@ for row in results['configuration']:
     # APY
     # liq_density
     # volume
-    Z[gammas.index(row[y_axis]), As.index(row[x_axis])] = row['Result']['APR_geo_mean'] - 0.2 * row['Result']['imbalance_integral']
+    Z[gammas.index(row[y_axis]), As.index(row[x_axis])] = row['Result']['APR_geo_mean']
 
 fig, ax = plt.subplots()
 plt.yscale('log')

@@ -33,7 +33,7 @@ for row in results['configuration']:
     # APY
     # liq_density
     # volume
-    Z[gammas.index(row[y_axis]), As.index(row[x_axis])] = row['Result']['APR_geo_mean'] - 0.2 * row['Result']['imbalance_integral']
+    Z[gammas.index(row[y_axis]), As.index(row[x_axis])] = row['Result']['imbalance_integral']
 
 fig, ax = plt.subplots()
 plt.yscale('log')
@@ -44,6 +44,6 @@ cbar = fig.colorbar(im, ax=ax)
 
 plt.xlabel(x_axis)
 plt.ylabel(y_axis)
-cbar.set_label("(APR - boost_rate)", rotation=270, labelpad=15)
+cbar.set_label("Imbalance", rotation=270, labelpad=15)
 plt.tight_layout()
 plt.show()
