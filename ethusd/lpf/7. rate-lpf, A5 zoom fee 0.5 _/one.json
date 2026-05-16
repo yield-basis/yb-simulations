@@ -1,0 +1,27 @@
+{
+    "configuration": [
+        {
+            "D": 20000000.0,
+            "adjustment_step": 0.005,
+            "fee_gamma": 0.00456,
+            "ma_half_time": 600,
+            "mid_fee": 0.005,
+            "out_fee": 0.0185,
+            "gas_fee": 0,
+            "n": 2,
+            "log": 1,
+            "allowed_extra_profit": 1e-10,
+            "ext_fee": 0.0002,
+            "gamma": 0,
+            "boost_rate": 0.0397,
+            "A": 5,
+            "lp_profit_fraction": 0.392,
+            "boost_mul": 1,
+            "boost_min": 0
+        }
+    ],
+    "datafile": [
+        "ethusdt-2024-May2026"
+    ],
+    "debug": 0
+}
