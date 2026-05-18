@@ -8,7 +8,7 @@ from datetime import datetime
 
 
 PEG_TO = 'price_scale'  # price_oracle vs price_scale
-FEE = 0.012
+FEE = 0.013
 
 
 class AMM:
@@ -187,7 +187,7 @@ class Simulator:
 if __name__ == '__main__':
     simulator = Simulator(
             filename='detailed-output.json.xz',
-            ext_fee=0.0,
+            ext_fee=1e-4,
             log=False, verbose=True)
 
     simulator.single_run(fee=FEE, leverage=2)

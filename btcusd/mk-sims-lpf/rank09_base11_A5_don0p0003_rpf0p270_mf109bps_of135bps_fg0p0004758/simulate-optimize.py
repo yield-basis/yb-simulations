@@ -182,7 +182,7 @@ class Simulator:
 if __name__ == '__main__':
     simulator = Simulator(
             filename='detailed-output.json.xz',
-            ext_fee=0.0,
+            ext_fee=1e-4,
             log=False, verbose=False)
 
     fees = []
