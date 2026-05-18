@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "source": "4_2-a-don-rpf_latest recast candidates, bad local reruns dropped",
+    "datafile": "/Users/michael/Documents/projects/cpp-twocrypto-modular/python/arb_sim/trade_data/btcusd/btcusdt-2024-F2026.json",
+    "start_time": "1706050800",
+    "pool_count": 1,
+    "expanded_from_pool_indices": [
+      87078,
+      68934,
+      2461,
+      311098,
+      262764,
+      216461,
+      519038,
+      474773,
+      412361,
+      70986,
+      32650,
+      2461,
+      250650,
+      212401,
+      454595,
+      402181
+    ],
+    "source_candidate_ordinal": 2,
+    "source_base_index": 2
+  },
+  "pools": [
+    {
+      "tag": "pdif<2000__idx_2461",
+      "pool": {
+        "initial_liquidity": [
+          "499999999999999991611392",
+          "12662071347733145600"
+        ],
+        "A": "50000",
+        "gamma": "100000000000000",
+        "mid_fee": "109000000",
+        "out_fee": "135000000",
+        "fee_gamma": "475794000000000",
+        "adjustment_step_min": "100000000",
+        "adjustment_step_max": "5000000000000000",
+        "ma_time": "865",
+        "reserved_profit_fraction": "2696969697",
+        "admin_fee": "0",
+        "policy": {
+          "kind": "none"
+        },
+        "initial_price": "39488010000000004128768",
+        "start_timestamp": "1706050800",
+        "donation_apy": "0.00030303030303030303",
+        "donation_frequency": "3600",
+        "donation_duration": "604800",
+        "donation_coins_ratio": "0.5"
+      },
+      "costs": {
+        "arb_fee_bps": 2,
+        "gas_coin0": 0.0,
+        "use_volume_cap": true,
+        "volume_cap_mult": 1
+      }
+    }
+  ]
+}

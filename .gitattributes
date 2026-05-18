@@ -528,3 +528,13 @@ ethusd/data-2024-2026-May/ethusdt-2024-May2026.json.xz filter=lfs diff=lfs merge
 ethusd/lpf/ethusdt-2024-May2026.json.xz filter=lfs diff=lfs merge=lfs -text
 btcusd/nodyn[[:space:]]lpf[[:space:]]simpler/mk_test/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
 btcusd/nodyn[[:space:]]lpf[[:space:]]simpler/6.[[:space:]]rate-lpf,[[:space:]]A5[[:space:]]zoom[[:space:]]THIS/releverage/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/mk-sims-lpf/rank06_base05_A5p5_don0p0024_rpf0p270_mf109bps_of135bps_fg0p0004758/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/mk-sims-lpf/rank01_base00_A5_don0p0130_rpf0p361_mf106bps_of159bps_fg0p1/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/mk-sims-lpf/rank07_base13_A5p5_don0p0018_rpf0p261_mf109bps_of135bps_fg0p0004758/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/mk-sims-lpf/rank10_base15_A6_don0p0003_rpf0p227_mf109bps_of135bps_fg0p0004758/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/mk-sims-lpf/rank09_base11_A5_don0p0003_rpf0p270_mf109bps_of135bps_fg0p0004758/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/mk-sims-lpf/rank04_base09_A5_don0p0106_rpf0p348_mf101bps_of188bps_fg0p00552/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/mk-sims-lpf/rank02_base01_A5_don0p0103_rpf0p339_mf104bps_of168bps_fg0p021018/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/mk-sims-lpf/rank08_base02_A5_don0p0003_rpf0p270_mf109bps_of135bps_fg0p0004758/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/mk-sims-lpf/rank03_base08_A6_don0p0018_rpf0p255_mf109bps_of135bps_fg0p0004758/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text
+btcusd/mk-sims-lpf/rank05_base12_A5p5_don0p0076_rpf0p297_mf109bps_of202bps_fg0p010771/detailed-output.json.xz filter=lfs diff=lfs merge=lfs -text

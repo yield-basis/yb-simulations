@@ -1,0 +1,255 @@
+{
+  "metadata": {
+    "trace": "/Users/michael/Documents/projects/cpp-twocrypto-modular/python/arb_sim/run_data/legacy_yb_releverage_compat/candidates/candidate_00_base_00/detailed-output.npz",
+    "rows": 2171280,
+    "start_timestamp": 1706050795.0,
+    "end_timestamp": 1771196345.0,
+    "duration_days": 753.9994212962963,
+    "peg_to": "price_scale",
+    "profit_field": "profit",
+    "leverage": 2.0,
+    "ext_fee": 0.0,
+    "donation_apy": 0.013030303030303031,
+    "fee_grid": {
+      "mode": "log",
+      "fee": null,
+      "fee_min": 0.002,
+      "fee_max": 0.05,
+      "fee_count": 20
+    }
+  },
+  "best": {
+    "fee": 0.015273531847980658,
+    "apy": 0.046032998394057466,
+    "final_growth": 1.097427693074839,
+    "final_value": 1.0974276930748386,
+    "initial_value": 0.9999999999999996,
+    "n_releverage_trades": 31939,
+    "final_collateral": 2.5855451819224027,
+    "final_debt": 1.9370025455695554,
+    "final_amm_price": 1.475870997684646,
+    "path": []
+  },
+  "runs": [
+    {
+      "fee": 0.0020000000000000005,
+      "apy": 0.04453941127275535,
+      "final_growth": 1.094193181715358,
+      "final_value": 1.0941931817153576,
+      "initial_value": 0.9999999999999996,
+      "n_releverage_trades": 166508,
+      "final_collateral": 2.566386301739535,
+      "final_debt": 1.9141878214519275,
+      "final_amm_price": 1.4891717269796791
+    },
+    {
+      "fee": 0.0023692221574249284,
+      "apy": 0.044630299410300736,
+      "final_growth": 1.094389868265065,
+      "final_value": 1.0943898682650646,
+      "initial_value": 0.9999999999999996,
+      "n_releverage_trades": 148741,
+      "final_collateral": 2.5673223646318664,
+      "final_debt": 1.915238748352822,
+      "final_amm_price": 1.4886210305035195
+    },
+    {
+      "fee": 0.0028066068156166186,
+      "apy": 0.04471959015553957,
+      "final_growth": 1.094583115737375,
+      "final_value": 1.0945831157373747,
+      "initial_value": 0.9999999999999996,
+      "n_releverage_trades": 134148,
+      "final_collateral": 2.568338528112353,
+      "final_debt": 1.916414591587228,
+      "final_amm_price": 1.4879686694716303
+    },
+    {
+      "fee": 0.0033247375273693564,
+      "apy": 0.044787400205819075,
+      "final_growth": 1.0947298853816696,
+      "final_value": 1.0947298853816692,
+      "initial_value": 0.9999999999999996,
+      "n_releverage_trades": 121252,
+      "final_collateral": 2.569350207277488,
+      "final_debt": 1.9176642185595802,
+      "final_amm_price": 1.487195875527834
+    },
+    {
+      "fee": 0.003938520908732828,
+      "apy": 0.044864173022477694,
+      "final_growth": 1.0948960664992764,
+      "final_value": 1.094896066499276,
+      "initial_value": 0.9999999999999996,
+      "n_releverage_trades": 109704,
+      "final_collateral": 2.57053151875874,
+      "final_debt": 1.9191317502690786,
+      "final_amm_price": 1.486280415489033
+    },
+    {
+      "fee": 0.00466561550222559,
+      "apy": 0.044983559275906006,
+      "final_growth": 1.0951545137822702,
+      "final_value": 1.0951545137822698,
+      "initial_value": 0.9999999999999996,
+      "n_releverage_trades": 98983,
+      "final_collateral": 2.5720768143643338,
+      "final_debt": 1.9209791637540192,
+      "final_amm_price": 1.4851959517079978
+    },
+    {
+      "fee": 0.005526939812949051,
+      "apy": 0.04511553380693881,
+      "final_growth": 1.0954402487828951,
+      "final_value": 1.0954402487828947,
+      "initial_value": 0.9999999999999996,
+      "n_releverage_trades": 88344,
+      "final_collateral": 2.573861303098061,
+      "final_debt": 1.9231332834585981,
+      "final_amm_price": 1.4839112843555897
+    },
+    {
+      "fee": 0.006547274133796447,
+      "apy": 0.045175966555925276,
+      "final_growth": 1.095571103164933,
+      "final_value": 1.0955711031649324,
+      "initial_value": 0.9999999999999996,
+      "n_releverage_trades": 77524,
+      "final_collateral": 2.5754897504740986,
+      "final_debt": 1.925322235586472,
+      "final_amm_price": 1.4823894538250064
+    },
+    {
+      "fee": 0.007755973474262822,
+      "apy": 0.04520684791607217,
+      "final_growth": 1.0956379733553923,
+      "final_value": 1.0956379733553918,
+      "initial_value": 0.9999999999999996,
+      "n_releverage_trades": 67122,
+      "final_collateral": 2.5772145392635046,
+      "final_debt": 1.9277621152001625,
+      "final_amm_price": 1.480586677436308
+    },
+    {
+      "fee": 0.00918781210381175,
+      "apy": 0.045279940697086775,
+      "final_growth": 1.0957962561273311,
+      "final_value": 1.0957962561273307,
+      "initial_value": 0.9999999999999996,
+      "n_releverage_trades": 57113,
+      "final_collateral": 2.5794478197232205,
+      "final_debt": 1.9307939363117241,
+      "final_amm_price": 1.4784510898613858
+    },
+    {
+      "fee": 0.01088398400730387,
+      "apy": 0.045554452529776815,
+      "final_growth": 1.0963908181787816,
+      "final_value": 1.0963908181787811,
+      "initial_value": 0.9999999999999996,
+      "n_releverage_trades": 47804,
+      "final_collateral": 2.5830583233071702,
+      "final_debt": 1.9351075168672194,
+      "final_amm_price": 1.4759212510178288
+    },
+    {
+      "fee": 0.012893288035581452,
+      "apy": 0.045807349650332875,
+      "final_growth": 1.0969387124255727,
+      "final_value": 1.0969387124255723,
+      "initial_value": 0.9999999999999996,
+      "n_releverage_trades": 39234,
+      "final_collateral": 2.5869769184401075,
+      "final_debt": 1.9399489892275015,
+      "final_amm_price": 1.4729243785703212
+    },
+    {
+      "fee": 0.015273531847980658,
+      "apy": 0.046032998394057466,
+      "final_growth": 1.097427693074839,
+      "final_value": 1.0974276930748386,
+      "initial_value": 0.9999999999999996,
+      "n_releverage_trades": 31939,
+      "final_collateral": 2.5855451819224027,
+      "final_debt": 1.9370025455695554,
+      "final_amm_price": 1.475870997684646
+    },
+    {
+      "fee": 0.01809319503818554,
+      "apy": 0.0457728718204199,
+      "final_growth": 1.096864008897104,
+      "final_value": 1.0968640088971036,
+      "initial_value": 0.9999999999999996,
+      "n_releverage_trades": 26189,
+      "final_collateral": 2.580321134387998,
+      "final_debt": 1.9302489387604216,
+      "final_amm_price": 1.480331172276765
+    },
+    {
+      "fee": 0.02143339929153999,
+      "apy": 0.04584569321122538,
+      "final_growth": 1.097021794962542,
+      "final_value": 1.0970217949625416,
+      "initial_value": 0.9999999999999996,
+      "n_releverage_trades": 21606,
+      "final_collateral": 2.5760721295255453,
+      "final_debt": 1.9236749323445517,
+      "final_amm_price": 1.4856458862815491
+    },
+    {
+      "fee": 0.025390242255226163,
+      "apy": 0.0453312392911315,
+      "final_growth": 1.0959073505263697,
+      "final_value": 1.0959073505263692,
+      "initial_value": 0.9999999999999996,
+      "n_releverage_trades": 17661,
+      "final_collateral": 2.567981486802734,
+      "final_debt": 1.9135714553354857,
+      "final_amm_price": 1.4919859507777717
+    },
+    {
+      "fee": 0.03007756226673427,
+      "apy": 0.04357587742326136,
+      "final_growth": 1.0921091670451877,
+      "final_value": 1.0921091670451872,
+      "initial_value": 0.9999999999999996,
+      "n_releverage_trades": 14932,
+      "final_collateral": 2.552611043004852,
+      "final_debt": 1.897261261054951,
+      "final_amm_price": 1.4995593134265743
+    },
+    {
+      "fee": 0.035630213481837404,
+      "apy": 0.041638368195621535,
+      "final_growth": 1.0879247584245224,
+      "final_value": 1.087924758424522,
+      "initial_value": 0.9999999999999996,
+      "n_releverage_trades": 12594,
+      "final_collateral": 2.535182838714747,
+      "final_debt": 1.8784888517407865,
+      "final_amm_price": 1.5086204094792437
+    },
+    {
+      "fee": 0.04220794562747481,
+      "apy": 0.04066459679878657,
+      "final_growth": 1.08582484854292,
+      "final_value": 1.0858248485429196,
+      "initial_value": 0.9999999999999996,
+      "n_releverage_trades": 10199,
+      "final_collateral": 2.5246051437244796,
+      "final_debt": 1.866268251552103,
+      "final_amm_price": 1.5154215453182731
+    },
+    {
+      "fee": 0.049999999999999996,
+      "apy": 0.03929871673145726,
+      "final_growth": 1.0828828946195872,
+      "final_value": 1.0828828946195868,
+      "initial_value": 0.9999999999999996,
+      "n_releverage_trades": 8024,
+      "final_collateral": 2.5265260090334554,
+      "final_debt": 1.8744424360695806,
+      "final_amm_price": 1.5049299013626292
+    }
+  ]
+}
