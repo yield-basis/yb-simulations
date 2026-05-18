@@ -10,14 +10,23 @@ pair = 'BTCUSDT'
 URI_TEMPLATE = 'https://api.binance.com/api/v1/klines?symbol=%s&interval=1m&limit=500&startTime={start}&endTime={end}' % pair
 data = []
 
-begin = datetime.datetime.fromtimestamp(1706000040)
-start = datetime.datetime(year=2026, month=2, day=16)
+session = requests.Session()
+
+begin = datetime.datetime.fromtimestamp(1706000040, tz=datetime.timezone.utc)
+start = datetime.datetime(year=2026, month=2, day=16, tzinfo=datetime.timezone.utc)
 dt = (start - begin)
 for i in range(-dt.days * 5, 0):
     d = int((start + datetime.timedelta(days=1) * i / 5).timestamp()) * 1000
     uri = URI_TEMPLATE.format(start=d, end=d + 86400 * 1000 // 5 - 1)
-    resp = requests.get(uri).json()
-    print(pair, datetime.datetime.fromtimestamp(d // 1000), len(resp))
+    while True:
+        try:
+            resp = session.get(uri).json()
+        except Exception as e:
+            print(e)
+            time.sleep(1)
+            continue
+        break
+    print(pair, datetime.datetime.fromtimestamp(d // 1000, tz=datetime.timezone.utc), len(resp))
     data += resp
     time.sleep(0.3)
 
