@@ -1,0 +1,37 @@
+{
+  "source": "user_replacement",
+  "pool": {
+    "tag": "eth_a5_mf73_of227_fg1_don062879_rpf385859",
+    "pool": {
+      "initial_liquidity": [
+        "499999999999999991611392",
+        "219086846025764634624"
+      ],
+      "A": "50000.0",
+      "gamma": "100000000000000",
+      "adjustment_step_min": "100000000",
+      "adjustment_step_max": "5000000000000000",
+      "ma_time": "865",
+      "admin_fee": "0",
+      "policy": {
+        "kind": "none"
+      },
+      "initial_price": "2282199999999999737856",
+      "start_timestamp": "1704067200",
+      "donation_frequency": "3600",
+      "donation_duration": "604800",
+      "donation_coins_ratio": "0.5",
+      "mid_fee": "73000000.0",
+      "out_fee": "227000000.0",
+      "fee_gamma": "1e+17",
+      "reserved_profit_fraction": "3858585859.0",
+      "donation_apy": "0.06287878787878788"
+    },
+    "costs": {
+      "arb_fee_bps": 2,
+      "gas_coin0": 0.0,
+      "use_volume_cap": true,
+      "volume_cap_mult": 1
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "candidate": "eth_a5_mf50_of209_fg0818547_don036364_rpf296970",
+  "params": {
+    "A": 5.0,
+    "donation_apy": 0.03636363636363636,
+    "reserved_profit_fraction": 0.296969697,
+    "mid_fee_bps": 50.0,
+    "out_fee_bps": 209.0,
+    "fee_gamma": 0.081854673
+  },
+  "metrics": {
+    "apy": 0.11629541080049255,
+    "apy_net": 0.07577888913990294,
+    "apy_net_gm": 0.07198645541116856,
+    "apy_xcp": 0.18598676488287458,
+    "apy_xcp_net": 0.14363476448199708,
+    "yb_apy_1p2_fee": 0.05457614813238836,
+    "yb_final_growth": 1.1349374469442126,
+    "yb_releverage_trades": 52035,
+    "lp_xcp_profit_final": "1297724451056992768",
+    "max_7d_pdiff_bps": 1408.9731773453516,
+    "max_7d_skew_pct": 64.70359530905253,
+    "trades": 99755,
+    "n_rebalances": 105300,
+    "tw_avg_pool_fee": 0.005713716756285768
+  },
+  "artifacts": {
+    "pool_config": "pool_config.json",
+    "pool_details": "pool_details.json",
+    "harness_result": "harness_result.json",
+    "harness_output": "harness_output.json",
+    "detailed_npz": "detailed-output.npz",
+    "yb_releverage": "yb_releverage.json",
+    "shift_click_plot": "shift_click_yb_plot.png"
+  }
+}

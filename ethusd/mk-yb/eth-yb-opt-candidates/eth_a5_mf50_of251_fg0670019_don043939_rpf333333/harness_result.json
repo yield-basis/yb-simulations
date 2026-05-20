@@ -1,0 +1,61 @@
+{
+  "idx": 2,
+  "tag": "eth_a5_mf50_of251_fg0670019_don043939_rpf333333",
+  "success": true,
+  "params": {
+    "A": 5.0,
+    "donation_apy": 0.04393939393939394,
+    "reserved_profit_fraction": 0.3333333333,
+    "mid_fee_bps": 50.0,
+    "out_fee_bps": 251.0,
+    "fee_gamma": 0.067001875
+  },
+  "metrics": {
+    "yb_apy": 0.05778810781340358,
+    "yb_apy_gm": 0.0016148097759166359,
+    "apy_net": 0.08012452234749734,
+    "apy_net_gm": 0.07571272682616105,
+    "vp": 1.3364426675060195,
+    "tvl_growth": 1.2922091343908386,
+    "max_7d_rel_price_diff": 0.1411553928576269,
+    "max_7d_skew": 0.6502546248873149,
+    "tw_avg_pool_fee": 0.006160025058482427,
+    "total_notional_coin0": 186865021.53143498,
+    "trades": 94768,
+    "n_rebalances": 100902,
+    "duration_s": 75119110.0,
+    "t_start": 1704067195,
+    "t_end": 1779186305
+  },
+  "final_state": {
+    "balances": [
+      "637016509140734383751168",
+      "307596435101608312832"
+    ],
+    "admin_balances": [
+      "0",
+      "0"
+    ],
+    "xp": [
+      "637016509140734383751168",
+      "655192625250104284020736"
+    ],
+    "D": "1292187825818005625896960",
+    "virtual_price": "1336442667506019584",
+    "xcp_profit": "2002314670809237760",
+    "lp_xcp_profit": "1334104890236429568",
+    "price_scale": "2130039722448911073280",
+    "price_oracle": "2124039379889299652608",
+    "last_prices": "2121317196505761447936",
+    "totalSupply": "10474938108198917242880",
+    "donation_shares": "8638713815171817472",
+    "donation_unlocked": "131163237516935232",
+    "timestamp": 1779186305
+  },
+  "costs": {
+    "arb_fee_bps": 2,
+    "gas_coin0": 0.0,
+    "use_volume_cap": true,
+    "volume_cap_mult": 1
+  }
+}

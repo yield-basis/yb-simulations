@@ -1,0 +1,58 @@
+{
+  "candidate": "btc_a5_mf120_of163_fg00850937_don0187374_rpf433333",
+  "selected_point": {
+    "A": 5.0,
+    "donation_apy": 0.01873737373737374,
+    "reserved_profit_fraction": 0.4333333333,
+    "mid_fee_bps": 120,
+    "out_fee_bps": 163,
+    "fee_gamma": 0.0085093697
+  },
+  "harness": {
+    "apy": 0.0701287251406757,
+    "apy_net": 0.04991062773388988,
+    "apy_net_gm": 0.03830031953492275,
+    "apy_xcp": 0.07996281209701017,
+    "apy_xcp_net": 0.05991556956864352,
+    "vp": 1.1736830796233684,
+    "vp_boosted": 1.173762963525964,
+    "tvl_growth": 1.627673692463838,
+    "max_7d_rel_price_diff": 0.17415038792961285,
+    "max_7d_skew": 0.6689237162845123,
+    "total_notional_coin0": 41376070.01189813,
+    "n_rebalances": 33982,
+    "trades": 23913,
+    "tw_avg_pool_fee": 0.01262576298446716,
+    "avg_rel_price_diff": 0.016736048781010433,
+    "yb_apy": -1.0,
+    "yb_apy_gm": -1.0,
+    "yb_fee": 0.012,
+    "yb_final_growth": -1.0,
+    "yb_releverage_trades": 0
+  },
+  "final_state": {
+    "price_scale": "81285220678920738701312",
+    "virtual_price": "1173683079623368448",
+    "xcp_profit": "1398654198766509312",
+    "lp_xcp_profit": "1172750152785461760",
+    "donation_shares": "972403192288296064",
+    "donation_unlocked": "165523439731158560"
+  },
+  "yb_releverage": {
+    "fee": 0.012,
+    "apy": 0.05536261285475352,
+    "final_growth": 1.1357770270744691,
+    "n_releverage_trades": 52985,
+    "duration_days": 862.4146990740741,
+    "rows": 2483756
+  },
+  "files": {
+    "pool_config": "pool_config.json",
+    "pool_details": "pool_details.json",
+    "harness_output": "harness_output.json",
+    "detailed_log": "detailed-output.npz",
+    "yb_releverage": "yb_releverage.json",
+    "yb_plot": "yb_releverage.png",
+    "shift_click_plot": "shift_click_price_yb.png"
+  }
+}
