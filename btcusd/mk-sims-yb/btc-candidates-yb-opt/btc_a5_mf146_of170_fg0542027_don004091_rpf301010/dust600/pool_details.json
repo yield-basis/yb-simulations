@@ -1,0 +1,46 @@
+{
+  "selected_point": {
+    "A": 5.0,
+    "donation_apy": 0.004090909090909091,
+    "reserved_profit_fraction": 0.301010101,
+    "mid_fee_bps": 146,
+    "out_fee_bps": 170,
+    "fee_gamma": 0.054202748,
+    "dustswapfreq": 600
+  },
+  "pool_config": {
+    "tag": "inspect",
+    "pool": {
+      "initial_liquidity": [
+        "499999999999999991611392",
+        "11820719404254654464"
+      ],
+      "A": "50000.0",
+      "gamma": "100000000000000",
+      "mid_fee": "146000000.0",
+      "out_fee": "170000000.0",
+      "fee_gamma": "5.4202748e+16",
+      "adjustment_step_min": "100000000",
+      "adjustment_step_max": "5000000000000000",
+      "ma_time": "865",
+      "reserved_profit_fraction": "3010101010.0",
+      "admin_fee": "0",
+      "policy": {
+        "kind": "none"
+      },
+      "initial_price": "42298609999999997575168",
+      "start_timestamp": "1704067200",
+      "donation_apy": "0.004090909090909091",
+      "donation_frequency": "3600",
+      "donation_duration": "604800",
+      "donation_coins_ratio": "0.5",
+      "dustswapfreq": "600.0"
+    },
+    "costs": {
+      "arb_fee_bps": 2,
+      "gas_coin0": 0.0,
+      "use_volume_cap": true,
+      "volume_cap_mult": 1
+    }
+  }
+}

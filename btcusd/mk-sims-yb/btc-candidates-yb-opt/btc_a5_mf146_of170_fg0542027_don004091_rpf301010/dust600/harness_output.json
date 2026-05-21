@@ -1,0 +1,181 @@
+{
+  "metadata": {
+    "candles_file": "/Users/michael/Documents/projects/cpp-twocrypto-modular/python/arb_sim/trade_data/btcusd/btcusd-2023-2026-filtered.json",
+    "pool_config_file": "/Users/michael/Documents/projects/cpp-twocrypto-modular/python/arb_sim/run_data/yb-candidates/robust/btc/btc_a5_mf146_of170_fg0542027_don004091_rpf301010/dust600/pool_config.json",
+    "harness_exe": "/Users/michael/Documents/projects/cpp-twocrypto-modular/cpp_modular/build/arb_harness",
+    "real": "double",
+    "run_started_at": "2026-05-21T08:43:58.310971+00:00",
+    "threads": 1,
+    "quiet_harness": true,
+    "n_pools": 1,
+    "n_candles_requested": 0,
+    "n_candles_loaded": 1241878,
+    "events": 2483756,
+    "start_time": 1704067200,
+    "disable_slippage_probes": true,
+    "save_actions": false,
+    "min_swap": 1e-06,
+    "max_swap": 1.0,
+    "dustswapfreq": 3600,
+    "userswapfreq": 0,
+    "userswapsize": 0,
+    "userswapthresh": 0,
+    "candle_filter": 99.0,
+    "cowswap_enabled": false,
+    "cowswap_file": null,
+    "cowswap_fee_bps": null,
+    "base_pool": {
+      "A": "50000.0",
+      "adjustment_step_max": "5000000000000000",
+      "adjustment_step_min": "100000000",
+      "admin_fee": "0",
+      "donation_apy": "0.004090909090909091",
+      "donation_coins_ratio": "0.5",
+      "donation_duration": "604800",
+      "donation_frequency": "3600",
+      "dustswapfreq": "600.0",
+      "fee_gamma": "5.4202748e+16",
+      "gamma": "100000000000000",
+      "initial_liquidity": [
+        "499999999999999991611392",
+        "11820719404254654464"
+      ],
+      "initial_price": "42298609999999997575168",
+      "ma_time": "865",
+      "mid_fee": "146000000.0",
+      "out_fee": "170000000.0",
+      "policy": "{'kind': 'none'}",
+      "reserved_profit_fraction": "3010101010.0",
+      "start_timestamp": "1704067200"
+    },
+    "grid": null,
+    "candles_read_ms": 690.795708,
+    "exec_ms": 406.254916,
+    "harness_wall_ms": 3500.849,
+    "postprocess_ms": 0.289,
+    "wall_ms": 3501.1380000000004,
+    "total_trades": 19937
+  },
+  "runs": [
+    {
+      "result": {
+        "events": 2483756,
+        "trades": 19937,
+        "total_notional_coin0": 35325785.664007865,
+        "lp_fee_coin0": 528182.2955419031,
+        "avg_pool_fee": 0.014705664939536327,
+        "tw_avg_pool_fee": 0.014638881974870638,
+        "min_pool_fee": 0.01459999999999999,
+        "max_pool_fee": 0.01605832435083508,
+        "arb_pnl_coin0": 55023.76707412413,
+        "arb_edge_candidates": 20011,
+        "arb_invalid_size_rejections": 0,
+        "arb_nonpositive_profit_rejections": 74,
+        "arb_guarded_loss_coin0": 9.651056681113424e-05,
+        "fee_capture_rate": 0.9056529576744974,
+        "n_rebalances": 122791,
+        "donations": 20698,
+        "donation_coin0_total": 14296.165617581657,
+        "donation_amounts_total": [
+          7152.20565224791,
+          0.08921961419809894
+        ],
+        "cowswap_trades": 0,
+        "cowswap_skipped": 0,
+        "cowswap_attraction_rate": -1.0,
+        "cowswap_notional_coin0": 0.0,
+        "cowswap_lp_fee_coin0": 0.0,
+        "cowswap_vol_rate": 0.0,
+        "pool_exec_ms": 406.245375,
+        "tw_real_slippage_1pct": -1.0,
+        "tw_real_slippage_5pct": -1.0,
+        "tw_real_slippage_10pct": -1.0,
+        "avg_rel_price_diff": 0.009537484857128216,
+        "max_rel_price_diff": 0.11433610394363991,
+        "max_7d_rel_price_diff": 0.05091734147328178,
+        "min_price_scale": 38896.40902606307,
+        "max_price_scale": 125809.05706962143,
+        "avg_imbalance": 0.9991536187644526,
+        "max_7d_skew": 0.5605876093495168,
+        "t_start": 1704067195,
+        "t_end": 1778579825,
+        "duration_s": 74512630.0,
+        "tvl_coin0_start": 1000000.0,
+        "tvl_coin0_end": 1549512.310027098,
+        "tvl_growth": 1.549512310027098,
+        "apy": 0.04858866406684492,
+        "apy_net": 0.044117068127382364,
+        "apy_xcp": 0.07878822843338029,
+        "apy_xcp_net": 0.07438401964100283,
+        "apy_net_gm": 0.037270013635173016,
+        "yb_apy": 0.032865674218555074,
+        "yb_apy_gm": 0.0003297683966603056,
+        "yb_final_growth": 1.0794002404405587,
+        "yb_fee": 0.012,
+        "yb_releverage_trades": 77161,
+        "vp": 1.118627408330857,
+        "vp_boosted": 1.1186385849432154,
+        "vpminusone": 0.11862740833085694
+      },
+      "final_state": {
+        "balances": [
+          "774720043686830259830784",
+          "9547995905733797888"
+        ],
+        "admin_balances": [
+          "0",
+          "0"
+        ],
+        "xp": [
+          "774720043686830259830784",
+          "774792266340267922030592"
+        ],
+        "D": "1549512309746574137753600",
+        "virtual_price": "1118627408330856960",
+        "xcp_profit": "1392494717266422528",
+        "lp_xcp_profit": "1118144874486319872",
+        "price_scale": "81147109193353009299456",
+        "price_oracle": "81146343435907561947136",
+        "last_prices": "81146007979860615495680",
+        "totalSupply": "2431325205746304417792",
+        "donation_shares": "202069800147800672",
+        "donation_unlocked": "24292009687097920",
+        "timestamp": 1778579825
+      },
+      "params": {
+        "pool": {
+          "initial_liquidity": [
+            "499999999999999991611392",
+            "11820719404254654464"
+          ],
+          "A": "50000.0",
+          "gamma": "100000000000000",
+          "mid_fee": "146000000.0",
+          "out_fee": "170000000.0",
+          "fee_gamma": "5.4202748e+16",
+          "adjustment_step_min": "100000000",
+          "adjustment_step_max": "5000000000000000",
+          "ma_time": "865",
+          "reserved_profit_fraction": "3010101010.0",
+          "admin_fee": "0",
+          "policy": {
+            "kind": "none"
+          },
+          "initial_price": "42298609999999997575168",
+          "start_timestamp": "1704067200",
+          "donation_apy": "0.004090909090909091",
+          "donation_frequency": "3600",
+          "donation_duration": "604800",
+          "donation_coins_ratio": "0.5",
+          "dustswapfreq": "600.0"
+        },
+        "costs": {
+          "arb_fee_bps": 2,
+          "gas_coin0": 0.0,
+          "use_volume_cap": true,
+          "volume_cap_mult": 1
+        }
+      }
+    }
+  ]
+}

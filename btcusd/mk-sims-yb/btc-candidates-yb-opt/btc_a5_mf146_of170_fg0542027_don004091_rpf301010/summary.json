@@ -1,0 +1,87 @@
+{
+  "candidate": "btc_a5_mf146_of170_fg0542027_don004091_rpf301010",
+  "selected_point": {
+    "A": 5.0,
+    "donation_apy": 0.004090909090909091,
+    "reserved_profit_fraction": 0.301010101,
+    "mid_fee_bps": 146,
+    "out_fee_bps": 170,
+    "fee_gamma": 0.054202748
+  },
+  "dustswapfreqs": [
+    3600,
+    600
+  ],
+  "runs": [
+    {
+      "candidate": "btc_a5_mf146_of170_fg0542027_don004091_rpf301010",
+      "dustswapfreq": 3600,
+      "A": 5.0,
+      "donation_apy": 0.004090909090909091,
+      "reserved_profit_fraction": 0.301010101,
+      "mid_fee_bps": 146,
+      "out_fee_bps": 170,
+      "fee_gamma": 0.054202748,
+      "apy": 0.04857897858247817,
+      "apy_net": 0.044083548990570876,
+      "apy_gm": 0.03892903875937087,
+      "apy_xcp_net": 0.07433046779556385,
+      "yb_apy": 0.03392049296431466,
+      "yb_apy_gm": 0.003360994718793715,
+      "yb_post_apy": 0.036924924956176414,
+      "yb_post_fee": 0.012,
+      "yb_post_final_growth": 1.08945033887471,
+      "yb_post_trades": 66145,
+      "lp_xcp_profit": null,
+      "max_7d_pdiff_bps": 1645.1707176128411,
+      "max_7d_skew_pct": 66.21334652953801,
+      "trades": 19466,
+      "n_rebalances": 34082,
+      "final_price_scale": "81488305242245538250752",
+      "files": {
+        "pool_config": "dust3600/pool_config.json",
+        "pool_details": "dust3600/pool_details.json",
+        "harness_output": "dust3600/harness_output.json",
+        "detailed_log": "dust3600/detailed-output.npz",
+        "yb_releverage": "dust3600/yb_releverage.json",
+        "yb_plot": "dust3600/yb_releverage.png",
+        "shift_click_plot": "dust3600/shift_click_price_yb.png"
+      }
+    },
+    {
+      "candidate": "btc_a5_mf146_of170_fg0542027_don004091_rpf301010",
+      "dustswapfreq": 600,
+      "A": 5.0,
+      "donation_apy": 0.004090909090909091,
+      "reserved_profit_fraction": 0.301010101,
+      "mid_fee_bps": 146,
+      "out_fee_bps": 170,
+      "fee_gamma": 0.054202748,
+      "apy": 0.04858866406684492,
+      "apy_net": 0.044117068127382364,
+      "apy_gm": 0.037270013635173016,
+      "apy_xcp_net": 0.07438401964100283,
+      "yb_apy": 0.032865674218555074,
+      "yb_apy_gm": 0.0003297683966603056,
+      "yb_post_apy": 0.035403060291500775,
+      "yb_post_fee": 0.012,
+      "yb_post_final_growth": 1.085676138230504,
+      "yb_post_trades": 109602,
+      "lp_xcp_profit": null,
+      "max_7d_pdiff_bps": 509.1734147328178,
+      "max_7d_skew_pct": 56.05876093495168,
+      "trades": 19937,
+      "n_rebalances": 122791,
+      "final_price_scale": "81147109193353009299456",
+      "files": {
+        "pool_config": "dust600/pool_config.json",
+        "pool_details": "dust600/pool_details.json",
+        "harness_output": "dust600/harness_output.json",
+        "detailed_log": "dust600/detailed-output.npz",
+        "yb_releverage": "dust600/yb_releverage.json",
+        "yb_plot": "dust600/yb_releverage.png",
+        "shift_click_plot": "dust600/shift_click_price_yb.png"
+      }
+    }
+  ]
+}
